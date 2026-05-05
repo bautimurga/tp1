@@ -1,45 +1,45 @@
 #include <stdio.h>
 
-void f_alpha(int *p) {
+void invertir_cifras(int *p) { //Invierte las 3 cifras
     int temp = *p;
-    int rev = 0;
+    int invertido = 0;
     while (temp > 0) {
-        rev = (rev * 10) + (temp % 10);
-        temp = temp / 10;
+        invertido = (invertido * 10) + (temp % 10); //Toma la última cifra y la agrega
+        temp = temp / 10; //Le quita la última cirfra al número
     }
-    *p = rev;
+    *p = invertido; //A la variable a la que apunta el puntero le invierte las cifras
 }
 
-void f_beta(int *p) {
+void dividir_en_dos(int *p) { //Divide en 2 el número inicial
     *p = *p / 2;
 }
 
-void f_gamma(int *p) {
+void sumar_num_cifras(int *p) {
     int temp = *p;
-    int suma = 0;
-    while (temp > 0) {
-        suma = suma + (temp % 10);
+    int suma_cifras = 0;
+    while (temp > 0) { //Esta parte del suma las cifras por separado
+        suma_cifras = suma_cifras + (temp % 10);
         temp = temp / 10;
     }
-    *p = *p + suma;
+    *p = *p + suma_cifras; //Obtengo el número más la suma de sus cifras
 }
 
 void procesar_enigma(int *valor_referencia) {
-    f_alpha(valor_referencia);
-    f_beta(valor_referencia);
-    f_gamma(valor_referencia);
+    invertir_cifras(valor_referencia);
+    dividir_en_dos(valor_referencia);
+    sumar_num_cifras(valor_referencia);
 }
 
 int main() {
-    int dato_secreto = 452;
+    int num = 452;
     
-    printf("Iniciando depuracion con el valor: %d\n", dato_secreto);
+    printf("Iniciando depuracion con el valor: %d\n", num);
     
     // Instrucción para el alumno: 
     // Pon un breakpoint aquí (F9) y usa F11 (Step Into) para entrar a cada función.
-    procesar_enigma(&dato_secreto);
+    procesar_enigma(&num);
     
-    printf("Resultado final del enigma: %d\n", dato_secreto);
+    printf("Resultado final del enigma: %d\n", num);
     
     return 0;
 }
