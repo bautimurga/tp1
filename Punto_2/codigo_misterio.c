@@ -24,7 +24,7 @@ void sumar_num_cifras(int *p) {
     *p = *p + suma_cifras; //Obtengo el número más la suma de sus cifras
 }
 
-void procesar_enigma(int *valor_referencia) {
+void procesar(int *valor_referencia) {
     invertir_cifras(valor_referencia);
     dividir_en_dos(valor_referencia);
     sumar_num_cifras(valor_referencia);
@@ -37,7 +37,7 @@ int main() {
     
     // Instrucción para el alumno: 
     // Pon un breakpoint aquí (F9) y usa F11 (Step Into) para entrar a cada función.
-    procesar_enigma(&num);
+    procesar(&num);
     
     printf("Resultado final del enigma: %d\n", num);
     
