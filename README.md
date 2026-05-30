@@ -17,7 +17,7 @@ Debajo se van a encontrar resueltos únicamente los puntos que se solicitan reso
 **¿Cómo configuraría el archivo .gitignore?** Primero que nada se tiene que utilizar ignorando un archivo por línea, siguiendo los siguientes preceptos:
 -"secreto.txt", para ignorar un archivo en específico.
 -"carpeta/", para ignorar una carpeta en específico.
--"\*.exe", para ignorar un tipo archivo.
+-"*.exe", para ignorar un tipo archivo.
 
 ### 3.f)Código "codigo_misterio.c"
 
@@ -29,7 +29,7 @@ Debajo se van a encontrar resueltos únicamente los puntos que se solicitan reso
 ### 3.g)Código "codigo_sin_funcionar.c"
 
 **El código "codigo_sin_funcionar.c" era un código que inicialmente no compilaba por diversos inconvenientes** errores de todo tipo, procedo a enumerarlos por orden en el que se encontrarton en el código:
--Faltaba incluir la galeria "<stdio.h>". Sin esta galeria no se ejecutan las funciones básicas de "printf" y "scanf".
+-Faltaba incluir la biblioteca "<stdio.h>". Sin esta biblioteca no se ejecutan las funciones básicas de "printf" y "scanf".
 -En la primer función que se usa en el código "scanf" faltaba el operador "&" previo a "valor1" para poder ingresar el valor por teclado.
 -Cuando se suman las variables "valor1" y "valor2" y se asigna el resultado a un variable "suma" faltaba el ";" en esta sentencia.
 -Luego en cuanto a la función "duplicar_numero()" hacían faltas correciones de implementación y en la invocación de la misma en el código principal
