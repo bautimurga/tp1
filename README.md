@@ -37,6 +37,10 @@ Debajo se van a encontrar resueltos únicamente los puntos que se solicitan reso
     -Declaración e Implementación: En cuanto a la declaración primero hay que declarar que el parámetro de entrada "numero" es del tipo puntero entero, agregando el operador indirección previo al parámetro. Luego cuando operamos para duplicar el valor usamos el el operador indirección nuevamente para ingresar al valor que tiene esa dirección de memoria que recibió la función y modificarlo multiplicando por dos el valor y asignandolo a dicha dirección de memoria. Finalmente no hace falta retornar nada, ya que es una función de tipo void, y en este caso el "valor1" que recibió va a terminar modificado, ya que operamos desde su dirección de memoria.
 -Finalmente faltaba un ";" en la sentencia "return 0" del main.
 
+### 4.c)Archivos no necesarios en el control de versiones
+
+Considero que el archivo "tp1_1.exe" no es necesario incluirlo al control de versiones de git ya que es un ejecutable (este puede depender del sistema en el que se corre el código fuente, por lo tanto puede variar, mientras el código fuente puede ser siempre el mismo), que se crea luego de compilar el ".c" del mismo. Mientras el que es necesario tener siempre presente en el control de versiones es el código fuente ".c".
+
 ## Autoría
 
 Este directorio es de autoría total del alumno Bautista Antonio Murga.
