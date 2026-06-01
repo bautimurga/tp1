@@ -41,6 +41,13 @@ Debajo se van a encontrar resueltos únicamente los puntos que se solicitan reso
 
 Considero que el archivo "tp1_1.exe" no es necesario incluirlo al control de versiones de git ya que es un ejecutable (este puede depender del sistema en el que se corre el código fuente, por lo tanto puede variar, mientras el código fuente puede ser siempre el mismo), que se crea luego de compilar el ".c" del mismo. Mientras el que es necesario tener siempre presente en el control de versiones es el código fuente ".c".
 
+### 4.g) Análisis de Direcciones de Memoria y Punteros
+
+- **Similitud entre los apartados 2 y 3:** Los resultados obtenidos en el apartado 2 (dirección a la que apunta el puntero) y el apartado 3 (dirección de memoria de la variable) son iguales. Ya que primero que nada en ambos estoy mostrando un mismo tipo de variable ("%p"), que se usa para representar direcciones de memoria, luego en el apartado 2 estoy mostrando la dirección de memoria de la variable, que es la que está siendo apuntada por mi puntero, sólo que accedemos a este valor desde el puntero, mostrando su valor, luego en el apartado 3 se muestra la misma dirección de memoria ya que muestro la dirección de la variable que estaba apuntada por el puntero, pero en este caso lo muestro accediendo desde la variable misma, utilizando el operador "&" delante del nombre de la variable. El operador & permite saber la dirección de memoria de la varibale que quiera.
+
+- **Diferencia con el apartado 4:**
+El resultado obtenido en el apartado 4 (dirección de memoria del propio puntero) es diferente a los dos anteriores. Esto ocurre porque el puntero "p_num" es también una variable independiente dentro del programa. Por lo tanto también se le reserava un espacio en memoria, por lo tanto una vez utilizamos el operador "&" delante del nombre del puntero, estamos obteniendo el valor de esa dirección de memoria.
+
 ## Autoría
 
 Este directorio es de autoría total del alumno Bautista Antonio Murga.
